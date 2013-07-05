@@ -1,0 +1,13 @@
+{
+    "name": "ncs"
+  , "description": "Node Control Server - MQTT server for collecting info from clients"
+  , "version": "0.0.1"
+  , "private": false
+  , "dependencies": {
+      "express": "2.5.8"
+    , "jade": ">= 0.0.1"
+    , "redis": ">= 0.7.1"
+    , "socket.io": ">= 0.8.7"
+    , "mqttjs": "0.1.7"
+  }
+}
