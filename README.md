@@ -17,3 +17,10 @@ Server
 The server uses MQTT, a lightweight messaging channel over TCP, and presents a
 pub-sub like interface to clients. Clients connect and can publish messages which
 get copied to all other connected clients.
+
+To start the server:
+
+    node server
+
+It will connect and listen to 0.0.0.0:1883 by default.
+
