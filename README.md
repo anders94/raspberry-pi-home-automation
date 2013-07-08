@@ -49,5 +49,6 @@ what you think it does.
 
 multi-light-switch.js
 ---------------------
-Connects to a server to publish events and works as a four position lightswitch 
+Connects to the server (IP is manually set in the source) via MQTT and 
+publishes light switch events. It works as a four position lightswitch 
 for two lights. See the video for a demonstration of this in action.
