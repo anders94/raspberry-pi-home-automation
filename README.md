@@ -24,3 +24,30 @@ To start the server:
 
 It will connect and listen to 0.0.0.0:1883 by default.
 
+Clients
+=======
+Clients read from and optionally write to the GPIO pins on the Raspberry Pi. Light
+switches are directly attached to 3.3v GPIO pins pushing them either high or low.
+Solid state relays to switch 120v AC loads are driven via 3.3v GPIO pins which are
+up-converted to 5v with a transistor. (3.3v isn't quite enough to solidly switch the
+Sharp S216S02 solid state relays I'm using) You may need to access GPIO pins as root
+depending on how you have things set up.
+
+watch.js
+--------
+Fires a callback when the GPIO pin state changes. Use this to test GPIO input 
+functionality.
+
+blink.js
+--------
+Blinks GPIO pins on and off for 5 seconds so you can get your SSR setup working.
+
+light-switch.js
+---------------
+Simple on / off lightswitch example linking input and output. It does exactly
+what you think it does.
+
+multi-light-switch.js
+---------------------
+Connects to a server to publish events and works as a four position lightswitch 
+for two lights. See the video for a demonstration of this in action.
