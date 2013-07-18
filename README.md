@@ -12,6 +12,29 @@ To get started, clone the repository and install the required dependencies.
     cd raspberry-pi-home-automation
     npm install
 
+Hardware
+========
+The Raspberr Pi needs a little bit of circuitry to protect and amplify its GPIO
+ports. Here's schematics of the circuits I created for this project.
+
+Protected Pull-Up Switch
+------------------------
+If you want to read from the GPIO pins on the Raspberry Pi, you shouldn't just 
+switch the pin between 3.3v+ and nothing. Rather, you should either pull it up
+to 3.3v+ through a small (1k) resistor or drain it down to ground through a 
+larger (10k + 1k = 11k) resistance.
+
+<a href="http://anders.com/1offs/protected-pull-up-switch-circuit.png"><img src="http://anders.com/1offs/protected-pull-up-switch-circuit.png" width="640" height="480" alt="Protected Pull-Up Switch Circuit"></a>
+
+Relay Driver
+------------
+The GPIO pins on the Raspberry Pi run at 3.3v which isn't really enough to 
+solidly throw relays. (in my case, I'm using a solid state relay but the 
+theory is the same) This circuit uses an NPN transistor to amplify the 3.3v
+GPIO output to a 5v output which is enough to throw the relay.
+
+<a href="http://anders.com/1offs/relay-driver-circuit.png"><img src="http://anders.com/1offs/relay-driver-circuit.png" width="640" height="480" alt="Protected Pull-Up Switch Circuit"></a>
+
 Server
 ======
 The server uses MQTT, a lightweight messaging channel over TCP, and presents a
@@ -52,3 +75,8 @@ multi-light-switch.js
 Connects to the server (IP is manually set in the source) via MQTT and 
 publishes light switch events. It works as a four position lightswitch 
 for two lights. See the video for a demonstration of this in action.
+
+TODO
+====
+
+Publish the SPI code and circuit schematic for the 120vAC current sensing capability.
