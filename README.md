@@ -14,7 +14,7 @@ To get started, clone the repository and install the required dependencies.
 
 Hardware
 ========
-The Raspberr Pi needs a little bit of circuitry to protect and amplify its GPIO
+The Raspberry Pi needs a little bit of circuitry to protect and amplify its GPIO
 ports. Here's schematics of the circuits I created for this project.
 
 Protected Pull-Up Switch
@@ -67,7 +67,7 @@ Blinks GPIO pins on and off for 5 seconds so you can get your SSR setup working.
 
 light-switch.js
 ---------------
-Simple on / off lightswitch example linking input and output. It does exactly
+Simple on or off lightswitch example, linking input and output. It does exactly
 what you think it does.
 
 multi-light-switch.js
